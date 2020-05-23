@@ -6,7 +6,7 @@
           <div slot="header">
             开源版本
             <el-button style="float: right; padding: 3px 0;" type="text"
-              >永久免费</el-button
+              >个人使用 永久免费</el-button
             >
           </div>
           <div>
@@ -28,7 +28,7 @@
                 >
               </li>
               <li>
-                可商业使用，settings须保留作者版权，恶意去除破解需承担法律责任
+                不支持自定义版权，须保留控制台打印信息
               </li>
             </ul>
             <img src="@/assets/ewm.png" alt="" />
@@ -38,7 +38,9 @@
       <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
         <el-card>
           <div slot="header">
-            授权版本<el-button style="float: right; padding: 3px 0;" type="text"
+            商业用途 ￥299<el-button
+              style="float: right; padding: 3px 0;"
+              type="text"
               >￥199</el-button
             >
           </div>
