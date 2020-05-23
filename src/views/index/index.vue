@@ -38,10 +38,9 @@
       <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
         <el-card>
           <div slot="header">
-            商业用途 ￥299<el-button
-              style="float: right; padding: 3px 0;"
-              type="text"
-              >￥199</el-button
+            商业用途 随意修改版权 提供vip群
+            <el-button style="float: right; padding: 3px 0;" type="text"
+              >￥299</el-button
             >
           </div>
           <div>
