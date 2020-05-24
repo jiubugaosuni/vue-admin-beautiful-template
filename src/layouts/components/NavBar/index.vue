@@ -15,7 +15,7 @@
       <el-col :xs="20" :sm="12" :md="12" :lg="12" :xl="12">
         <div class="right-panel">
           <error-log />
-          <byui-screenfull @refresh="refreshRoute"></byui-screenfull>
+          <full-screen-bar @refresh="refreshRoute"></full-screen-bar>
           <theme-bar></theme-bar>
           <byui-icon
             title="重载路由"
@@ -58,17 +58,20 @@
 
 <script>
 import { mapGetters } from "vuex";
-import ErrorLog from "@/components/ErrorLog";
-import ByuiScreenfull from "@/components/ByuiScreenfull";
-import Breadcrumb from "zx-breadcrumb";
-import ThemeBar from "@/layouts/components/ThemeBar";
+
+import {
+  Breadcrumb,
+  ThemeBar,
+  FullScreenBar,
+  ErrorLog,
+} from "@/layouts/components";
 
 export default {
   name: "NavBar",
   components: {
     Breadcrumb,
     ErrorLog,
-    ByuiScreenfull,
+    FullScreenBar,
     ThemeBar,
   },
   data() {
@@ -111,19 +114,16 @@ export default {
       const view = arr[0];
       this.pulse = true;
       this.$store.dispatch("tagsBar/delCachedRoutes", view).then(() => {
-        const { fullPath } = view;
-        this.$nextTick(() => {
-          this.$router
-            .replace({
-              path: "/redirect" + this.$route.fullPath,
-            })
-            .then(() => {
-              setTimeout(() => {
-                this.pulse = false;
-              }, 1000);
-            })
-            .catch(() => {});
-        });
+        this.$router
+          .replace({
+            path: "/redirect" + this.$route.fullPath,
+          })
+          .then(() => {
+            setTimeout(() => {
+              this.pulse = false;
+            }, 1000);
+          })
+          .catch(() => {});
       });
     },
     handleCommand(command) {

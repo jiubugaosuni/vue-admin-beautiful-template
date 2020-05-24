@@ -46,12 +46,9 @@
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0",
-    "zx-breadcrumb": "^0.0.1",
     "zx-icon": "1.0.2",
     "zx-keel": "^0.9.0",
-    "zx-side-bar": "^0.0.4",
-    "zx-tags-bar": "^0.0.3",
-    "zx-top-bar": "^0.0.2"
+    "zx-layouts": "^0.0.4"
   },
   "devDependencies": {
     "@babel/register": "^7.9.0",
