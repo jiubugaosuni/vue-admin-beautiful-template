@@ -8,16 +8,7 @@ const FileManagerPlugin = require("filemanager-webpack-plugin");
 const date = require("dayjs")().format("YYYY_M_D");
 const time = require("dayjs")().format("YYYY-M-D HH:mm:ss");
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
-
-const productionGzipExtensions = [
-  "js",
-  "css",
-  "sass",
-  "scss",
-  "svg",
-  "vue",
-  "ttf",
-];
+const productionGzipExtensions = ["html", "js", "css", "svg"];
 
 function resolve(dir) {
   return path.join(__dirname, dir);
@@ -25,7 +16,7 @@ function resolve(dir) {
 
 function mockServer() {
   if (process.env.NODE_ENV === "development") {
-    const mockServer = require("./mock/mock-server.js");
+    const mockServer = require("./mock/mockServer.js");
     return mockServer;
   } else {
     return "";
