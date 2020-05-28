@@ -2,7 +2,7 @@
   "name": "vue-admin-beautiful-template",
   "version": "1.0.0",
   "private": true,
-  "author": "chuzhixin <1204505056@qq.com>",
+  "author": "chuzhixin",
   "participants": [],
   "homepage": "https://chu1204505056.gitee.io/vue-admin-beautiful",
   "scripts": {
@@ -33,7 +33,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "core-js": "^3.6.5",
-    "dayjs": "^1.8.27",
+    "dayjs": "^1.8.28",
     "element-ui": "^2.13.2",
     "jquery": "^3.5.1",
     "js-cookie": "^2.2.1",

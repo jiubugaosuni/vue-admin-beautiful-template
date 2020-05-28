@@ -21,16 +21,16 @@ const getters = {
   permissions: (state) => state.permissions,
 };
 const mutations = {
-  setAccessToken: (state, accessToken) => {
+  setAccessToken(state, accessToken) {
     state.accessToken = accessToken;
   },
-  setUserName: (state, userName) => {
+  setUserName(state, userName) {
     state.userName = userName;
   },
-  setAvatar: (state, avatar) => {
+  setAvatar(state, avatar) {
     state.avatar = avatar;
   },
-  setPermissions: (state, permissions) => {
+  setPermissions(state, permissions) {
     state.permissions = permissions;
   },
 };
@@ -67,11 +67,11 @@ const actions = {
   },
   async logout({ commit, dispatch }) {
     await logout(state.accessToken);
+    await dispatch("tagsBar/delAllRoutes", null, { root: true });
     commit("setAccessToken", "");
     commit("setPermissions", []);
     removeAccessToken();
     resetRouter();
-    await dispatch("tagsBar/delAllRoutes", null, { root: true });
   },
   resetAccessToken({ commit }) {
     commit("setAccessToken", "");
