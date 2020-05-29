@@ -20,7 +20,6 @@
         </div>
       </div>
       <div class="byui-main main-padding">
-        <nav-bar></nav-bar>
         <app-main></app-main>
       </div>
     </div>

@@ -5,8 +5,8 @@
         class="user-avatar"
         :src="require('@/assets/user.gif')"
       ></el-avatar>
-      <span class="hidden-xs-only user-name">{{ userName }}</span>
-      <i class="hidden-xs-only el-icon-arrow-down el-icon--right"></i>
+      <span class="hidden-md-and-down user-name">{{ userName }}</span>
+      <i class="hidden-md-and-down el-icon-arrow-down el-icon--right"></i>
     </span>
 
     <el-dropdown-menu slot="dropdown">
